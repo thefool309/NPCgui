@@ -75,10 +75,7 @@ void Utils::PrintCharacterPtr(Character* character)
 	character->Print();
 }
 
-pClass Utils::UserChooseClass()
-{
-	return pClass();
-}
+
 
 //Character* Utils::GenerateNPC()
 //{

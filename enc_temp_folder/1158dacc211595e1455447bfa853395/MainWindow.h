@@ -125,7 +125,7 @@ public:
 
 	void onSpinCtrlEvent(wxSpinEvent& event);
 
-	void CreateNewCharacter();
+	
 
 	void SaveSettings() {	//Save settings
 		std::ofstream fileOut("settings.bin", ios::binary);

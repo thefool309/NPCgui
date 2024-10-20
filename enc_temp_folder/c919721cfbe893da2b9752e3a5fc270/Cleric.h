@@ -10,8 +10,8 @@ private:
 	int mChannelDivinity;
 	int mCantripsKnown;
 public:
-	Cleric(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int lvl, string name, int hitDie = 8)
-		: Character(strength, dexterity, constitution, intelligence, wisdom, charisma, lvl, name, hitDie)
+	Cleric(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int lvl, int hitDie, string name)
+		: Character(strength, dexterity, constitution, intelligence, wisdom, charisma, lvl, hitDie, name)
 	{
 		IsCaster(true);
 		SpellStats();

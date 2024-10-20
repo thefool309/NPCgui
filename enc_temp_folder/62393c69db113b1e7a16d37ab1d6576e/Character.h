@@ -72,7 +72,7 @@ public:
 		}
 		
 		//random leveled character constructor
-		Character(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int lvl, string name, int hitdie = 4)
+		Character(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int lvl, int hitDie, string name)
 			:
 				  mStrength(strength),
 				  mDexterity(dexterity),
@@ -82,7 +82,7 @@ public:
 				  mCharisma(charisma),
 				  mLvl(lvl),
 				  mCharacterName(name), 
-				  mHitDie(hitdie)
+				  mHitDie(hitDie)
 		{
 			DetermineBonuses();
 			DetermineProfBonus();
@@ -124,8 +124,6 @@ public:
 		int ProfBonus() const { return mProfBonus; }
 
 		int Lvl() const { return mLvl; }
-
-		int Lvl(int newLvl) { mLvl = newLvl; }
 
 		int ArmorClass() const { return mArmorClass; }
 

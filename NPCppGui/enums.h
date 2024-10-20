@@ -9,20 +9,4 @@ enum AbilityScore {
 	Charisma = 6,
 };
 
-enum pClass {
-	Artificer = 0,
-	Barbarian,
-	Bard,
-	NPC,
-	Cleric,
-	Druid,
-	Fighter,
-	Monk,
-	Paladin,
-	Ranger,
-	Rogue,
-	Sorcerer,
-	Warlock,
-	Wizard = 13
-};
 

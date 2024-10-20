@@ -233,7 +233,181 @@ void MainWindow::OnNameEnter(wxCommandEvent& event)
 
 void MainWindow::OnClassSelect(wxCommandEvent& event)
 {
-	CreateNewCharacter();
+	std::string currentValue = classComboBox->GetValue().ToStdString();
+	int commonerComp = _stricmp("Commoner", currentValue.c_str());
+	int artiComp = _stricmp("Artificer", currentValue.c_str());
+	int barbComp = _stricmp("barbarian", currentValue.c_str());
+	int bardComp = _stricmp("bard", currentValue.c_str());
+	int clericComp = _stricmp("cleric", currentValue.c_str());
+	int druidComp = _stricmp("druid", currentValue.c_str());
+	int fightComp = _stricmp("fighter", currentValue.c_str());
+	int monkComp = _stricmp("monk", currentValue.c_str());
+	int palComp = _stricmp("paladin", currentValue.c_str());
+	int rangComp = _stricmp("ranger", currentValue.c_str());
+	int rogComp = _stricmp("rogue", currentValue.c_str());
+	int sorcComp = _stricmp("Sorcerer", currentValue.c_str());
+	int warComp = _stricmp("warlock", currentValue.c_str());
+	int wizComp = _stricmp("wizard", currentValue.c_str());
+
+	if (commonerComp == 0) {
+		pCurrentCharacter = new Character(strSpin->GetValue(),
+										  dexSpin->GetValue(),
+										  conSpin->GetValue(),
+										  intelSpin->GetValue(),
+										  wisSpin->GetValue(),
+										  chaSpin->GetValue(),
+										  1, 4,
+										  pNameTextBox->GetValue().ToStdString());
+	}
+	else if (artiComp == 0) {
+		pCurrentCharacter = new Artificer(strSpin->GetValue(),
+										  dexSpin->GetValue(),
+										  conSpin->GetValue(),
+										  intelSpin->GetValue(),
+										  wisSpin->GetValue(),
+										  chaSpin->GetValue(),
+										  1, 4,
+										  pNameTextBox->GetValue().ToStdString());
+	}
+	else if (barbComp == 0) {
+		pCurrentCharacter =  new Barbarian(strSpin->GetValue(),
+											dexSpin->GetValue(),
+											conSpin->GetValue(),
+											intelSpin->GetValue(),
+											wisSpin->GetValue(),
+											chaSpin->GetValue(),
+											1, 4,
+											pNameTextBox->GetValue().ToStdString());
+	}
+	else if (bardComp == 0) {
+		pCurrentCharacter = new Bard(strSpin->GetValue(),
+									 dexSpin->GetValue(),
+									 conSpin->GetValue(),
+									 intelSpin->GetValue(),
+									 wisSpin->GetValue(),
+									 chaSpin->GetValue(),
+									 1, 4,
+									 pNameTextBox->GetValue().ToStdString());
+	}
+	else if (clericComp == 0) {
+		pCurrentCharacter = new Cleric(strSpin->GetValue(),
+									 dexSpin->GetValue(),
+									 conSpin->GetValue(),
+									 intelSpin->GetValue(),
+									 wisSpin->GetValue(),
+									 chaSpin->GetValue(),
+									 1, 4,
+									 pNameTextBox->GetValue().ToStdString());
+	}
+	else if (druidComp == 0) {
+		pCurrentCharacter = new Druid(strSpin->GetValue(),
+									 dexSpin->GetValue(),
+									 conSpin->GetValue(),
+									 intelSpin->GetValue(),
+									 wisSpin->GetValue(),
+									 chaSpin->GetValue(),
+									 1, 4,
+									 pNameTextBox->GetValue().ToStdString());
+	}
+	else if (fightComp == 0) {
+		pCurrentCharacter = new Fighter(strSpin->GetValue(),
+									  dexSpin->GetValue(),
+									  conSpin->GetValue(),
+									  intelSpin->GetValue(),
+									  wisSpin->GetValue(),
+									  chaSpin->GetValue(),
+									  1, 4,
+									  pNameTextBox->GetValue().ToStdString());
+	}
+	else if (monkComp == 0) {
+		pCurrentCharacter = new Monk(strSpin->GetValue(),
+									 dexSpin->GetValue(),
+									 conSpin->GetValue(),
+									 intelSpin->GetValue(),
+									 wisSpin->GetValue(),
+									 chaSpin->GetValue(),
+									 1, 4,
+									 pNameTextBox->GetValue().ToStdString());
+	}
+	else if (palComp == 0) {
+		pCurrentCharacter = new Paladin(strSpin->GetValue(),
+										dexSpin->GetValue(),
+										conSpin->GetValue(),
+										intelSpin->GetValue(),
+										wisSpin->GetValue(),
+										chaSpin->GetValue(),
+										1, 4,
+										pNameTextBox->GetValue().ToStdString());
+	}
+	else if (rangComp == 0) {
+		pCurrentCharacter = new Ranger(strSpin->GetValue(),
+									   dexSpin->GetValue(),
+									   conSpin->GetValue(),
+									   intelSpin->GetValue(),
+									   wisSpin->GetValue(),
+									   chaSpin->GetValue(),
+									   1, 4,
+									   pNameTextBox->GetValue().ToStdString());
+	}
+	else if (rogComp == 0) {
+		pCurrentCharacter = new Rogue(strSpin->GetValue(),
+									  dexSpin->GetValue(),
+									  conSpin->GetValue(),
+									  intelSpin->GetValue(),
+									  wisSpin->GetValue(),
+									  chaSpin->GetValue(),
+									  1, 4,
+									  pNameTextBox->GetValue().ToStdString());
+	}
+	else if (sorcComp == 0) {
+		pCurrentCharacter = new Sorcerer(strSpin->GetValue(),
+										 dexSpin->GetValue(),
+										 conSpin->GetValue(),
+										 intelSpin->GetValue(),
+										 wisSpin->GetValue(),
+										 chaSpin->GetValue(),
+										 1, 4,
+										 pNameTextBox->GetValue().ToStdString());
+	}
+	else if (warComp == 0) {
+		pCurrentCharacter = new Warlock(strSpin->GetValue(),
+										dexSpin->GetValue(),
+										conSpin->GetValue(),
+										intelSpin->GetValue(),
+										wisSpin->GetValue(),
+										chaSpin->GetValue(),
+										1, 4,
+										pNameTextBox->GetValue().ToStdString());
+	}
+	else if (wizComp == 0) {
+		pCurrentCharacter = new Wizard(strSpin->GetValue(),
+									   dexSpin->GetValue(),
+									   conSpin->GetValue(),
+									   intelSpin->GetValue(),
+									   wisSpin->GetValue(),
+									   chaSpin->GetValue(),
+									   1, 4,
+									   pNameTextBox->GetValue().ToStdString());
+	}
+	else {
+		int result = classSelectErrorMessage->ShowModal();
+		if (result == wxID_OK) {
+			pCurrentCharacter = new Character(strSpin->GetValue(),
+											  dexSpin->GetValue(),
+											  conSpin->GetValue(),
+											  intelSpin->GetValue(),
+											  wisSpin->GetValue(),
+											  chaSpin->GetValue(),
+											  1, 4,
+											  pNameTextBox->GetValue().ToStdString());
+		}
+		else {
+			this->Close();
+		}
+
+	}
+	
+
 }
 
 void MainWindow::OnLightThemeClickie(wxCommandEvent& event)
@@ -320,188 +494,7 @@ void MainWindow::onSpinCtrlEvent(wxSpinEvent& event) {
 		break;
 	case ElementIDs::CHA:
 		pCurrentCharacter->Cha(chaSpin->GetValue());
-		pCurrentCharacter->DetermineBonuses();
 		break;
-	case ElementIDs::LVL:
-		pCurrentCharacter->Lvl(lvlSpin->GetValue());
-		CreateNewCharacter();
-	}
-}
-
-void MainWindow::CreateNewCharacter()
-{
-	std::string currentValue = classComboBox->GetValue().ToStdString();
-	int commonerComp = _stricmp("Commoner", currentValue.c_str());
-	int artiComp = _stricmp("Artificer", currentValue.c_str());
-	int barbComp = _stricmp("barbarian", currentValue.c_str());
-	int bardComp = _stricmp("bard", currentValue.c_str());
-	int clericComp = _stricmp("cleric", currentValue.c_str());
-	int druidComp = _stricmp("druid", currentValue.c_str());
-	int fightComp = _stricmp("fighter", currentValue.c_str());
-	int monkComp = _stricmp("monk", currentValue.c_str());
-	int palComp = _stricmp("paladin", currentValue.c_str());
-	int rangComp = _stricmp("ranger", currentValue.c_str());
-	int rogComp = _stricmp("rogue", currentValue.c_str());
-	int sorcComp = _stricmp("Sorcerer", currentValue.c_str());
-	int warComp = _stricmp("warlock", currentValue.c_str());
-	int wizComp = _stricmp("wizard", currentValue.c_str());
-
-	if (commonerComp == 0) {
-		pCurrentCharacter = new Character(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (artiComp == 0) {
-		pCurrentCharacter = new Artificer(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(), 
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (barbComp == 0) {
-		pCurrentCharacter = new Barbarian(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (bardComp == 0) {
-		pCurrentCharacter = new Bard(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (clericComp == 0) {
-		pCurrentCharacter = new Cleric(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (druidComp == 0) {
-		pCurrentCharacter = new Druid(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (fightComp == 0) {
-		pCurrentCharacter = new Fighter(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (monkComp == 0) {
-		pCurrentCharacter = new Monk(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (palComp == 0) {
-		pCurrentCharacter = new Paladin(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (rangComp == 0) {
-		pCurrentCharacter = new Ranger(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (rogComp == 0) {
-		pCurrentCharacter = new Rogue(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (sorcComp == 0) {
-		pCurrentCharacter = new Sorcerer(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (warComp == 0) {
-		pCurrentCharacter = new Warlock(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else if (wizComp == 0) {
-		pCurrentCharacter = new Wizard(strSpin->GetValue(),
-			dexSpin->GetValue(),
-			conSpin->GetValue(),
-			intelSpin->GetValue(),
-			wisSpin->GetValue(),
-			chaSpin->GetValue(),
-			lvlSpin->GetValue(),
-			pNameTextBox->GetValue().ToStdString());
-	}
-	else {
-		int result = classSelectErrorMessage->ShowModal();
-		if (result == wxID_OK) {
-			pCurrentCharacter = new Character(strSpin->GetValue(),
-				dexSpin->GetValue(),
-				conSpin->GetValue(),
-				intelSpin->GetValue(),
-				wisSpin->GetValue(),
-				chaSpin->GetValue(),
-				lvlSpin->GetValue(),
-				pNameTextBox->GetValue().ToStdString());
-		}
-		else {
-			this->Close();
-		}
-
 	}
 }
 

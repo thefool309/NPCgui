@@ -12,4 +12,5 @@ class Utils {
 public:
 	static void DetermineSCAbility(int& scAttackBonus, int& spellSaveDC, int& profBonus, int& chaBonus, int& wisBonus, int& intelBonus);
 	static void PrintCharacterPtr(Character* newCharacter);
+	static Character* GenerateNPC();
 };

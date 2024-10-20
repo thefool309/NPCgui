@@ -30,6 +30,7 @@
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="Monk.h" />
+    <ClInclude Include="NPC.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="Ranger.h" />
     <ClInclude Include="Rogue.h" />
